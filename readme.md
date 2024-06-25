@@ -23,7 +23,7 @@ Please use it only for versioning during development, as it does not reflect the
 4. Enter `https://github.com/witalosk/AutoVersionWriter.git?path=Packages/com.witalosk.auto_version_writer`
 
 ## Getting Started
-1. Add `VersionViewer` prefab to your scene.
+1. Add `VersionViewerCanvas` prefab to your scene.
 2. That's all!
 
 ## Scripting

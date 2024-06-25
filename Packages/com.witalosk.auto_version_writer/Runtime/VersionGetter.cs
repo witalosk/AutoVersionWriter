@@ -58,7 +58,7 @@ namespace AutoVersionWriter
         private static bool TryLoadVersionData()
         {
             if (_versionData != null) return true;
-            _versionData = Resources.Load<VersionData>(VersionData.VersionDataPath);
+            _versionData = Resources.Load<VersionData>("VersionData");
             return _versionData != null;
         }
         

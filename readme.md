@@ -1,6 +1,8 @@
 # Auto Version Writer
 A simple automated version writer for Unity.
 
+![screenshot](./screenshot.png)
+
 This is a simple versioning tool that automatically sets the app version based on the number of commits in git and the number of builds each time the app is built.
 Please use it only for versioning during development, as it does not reflect the version of the Unity app.
 

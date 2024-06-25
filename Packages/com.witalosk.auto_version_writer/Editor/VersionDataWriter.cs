@@ -21,6 +21,11 @@ namespace AutoVersionWriter
             var data = AssetDatabase.LoadAssetAtPath<VersionData>(VersionData.VersionDataPath);
             if (data == null)
             {
+                if (!AssetDatabase.IsValidFolder("Assets/Resources"))
+                {
+                    AssetDatabase.CreateFolder("Assets", "Resources");
+                }
+                
                 data = ScriptableObject.CreateInstance<VersionData>();
                 AssetDatabase.CreateAsset(data, VersionData.VersionDataPath);
             }
@@ -30,7 +35,7 @@ namespace AutoVersionWriter
             string last10Commits = ExecuteGitCommand("log -10  --pretty=format:\"%s \nby %cn (%ci) %h\n\"");
             int commitNum = int.Parse(ExecuteGitCommand("rev-list --count HEAD"));
 
-            data.Version = GetVersion(data.Version, commitNum);
+            data.Version = GetVersion(data.Version, commitNum + data.CommitNumOffset);
             data.BuildDateTime = DateTime.Now.ToString(VersionData.DateTimeFormat);
             data.BranchName = branchName;
             data.CommitHash = hash;

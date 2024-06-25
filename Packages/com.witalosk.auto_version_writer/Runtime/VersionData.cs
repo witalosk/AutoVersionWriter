@@ -15,5 +15,8 @@ namespace AutoVersionWriter
         public string BranchName;
         public string CommitHash;
         [TextArea] public string Last10Commits;
+
+        [Header("Options")]
+        public int CommitNumOffset = 0;
     }
 }

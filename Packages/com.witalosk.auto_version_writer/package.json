@@ -1,0 +1,19 @@
+﻿{
+  "name": "com.witalosk.auto_version_writer",
+  "displayName": "Auto Version Writer",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "description": "Simple automated version writer for unity.",
+  "author": {
+    "name": "witalosk",
+    "url": "https://github.com/witalosk"
+  },
+  "keywords": [
+    "Version",
+    "Unity"
+  ],
+  "dependencies": {
+  },
+  "samples": [
+  ]
+}

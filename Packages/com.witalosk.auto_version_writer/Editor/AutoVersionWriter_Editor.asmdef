@@ -1,0 +1,16 @@
+{
+    "name": "AutoVersionWriter_Editor",
+    "rootNamespace": "",
+    "references": [
+        "AutoVersionWriter"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

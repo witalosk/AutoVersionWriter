@@ -15,15 +15,22 @@ namespace AutoVersionWriter
         {
             get
             {
-                if (TryLoadVersionData())
+                bool isLoaded = TryLoadVersionData();
+#if UNITY_EDITOR
+                var data = VersionDataWriter.GetVersion(Vector4Int.zero, isLoaded ? _versionData.MajorTag : "major");
+                return $"{data.x}.{data.y}.{data.z}_{data.w}";
+#else
+
+                if (isLoaded)
                 {
-                    return $"{_versionData.Version.x}.{_versionData.Version.y}.{_versionData.Version.z}";
+                    return $"{_versionData.Version.x}.{_versionData.Version.y}.{_versionData.Version.z}_{_versionData.Version.w}";;
                 }
 
-                return "0.0.0";
+                return "0.0.0_0";
+#endif
             }
         }
-        
+
         public static DateTime BuildDateTime
         {
             get
@@ -37,7 +44,7 @@ namespace AutoVersionWriter
 
                     return DateTime.MinValue;
                 }
-                
+
                 return DateTime.MinValue;
             }
         }
@@ -50,7 +57,7 @@ namespace AutoVersionWriter
                 {
                     return _versionData;
                 }
-                
+
                 return null;
             }
         }
@@ -61,6 +68,6 @@ namespace AutoVersionWriter
             _versionData = Resources.Load<VersionData>("VersionData");
             return _versionData != null;
         }
-        
+
     }
 }

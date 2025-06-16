@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1cd76395551c7042951e103a3131e2b, type: 3}
   m_Name: VersionData
   m_EditorClassIdentifier: 
-  Version: {x: 0, y: 1, z: 2}
+  Version:
+    m_X: 0
+    m_Y: 0
+    m_Z: 0
+    m_W: 0
   BuildDateTime: 2024/06/25 15:30:49
   BranchName: main
   CommitHash: dbc6796
   Last10Commits: "[init] Repository \nby witalosk (2024-06-25 15:22:54 +0900) dbc6796"
-  CommitNumOffset: 0
+  MajorTag: \[major\]

@@ -8,15 +8,15 @@ namespace AutoVersionWriter
         public const string DateTimeFormat = "yyyy/MM/dd HH:mm:ss";
 
         [Header("Build Info")]
-        public Vector3Int Version;
+        public Vector4Int Version;
         public string BuildDateTime;
-        
+
         [Header("Commit Info")]
         public string BranchName;
         public string CommitHash;
         [TextArea] public string Last10Commits;
 
         [Header("Options")]
-        public int CommitNumOffset = 0;
+        public string MajorTag = @"\[major\]";
     }
 }

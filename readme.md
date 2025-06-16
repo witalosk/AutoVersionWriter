@@ -11,10 +11,11 @@ Please use it only for versioning during development, as it does not reflect the
 - Git
 
 ### Versioning Rule
-- Major.Minor.Patch
-  - Major - After the 100th digit of the number of commits
-  - Minor - Number of commits in tens and ones
-  - Patch - Build Count
+- Major.Minor.Patch_Build
+  - Major - The count of major commits defined by major tag. (user defined)
+  - Minor - Number of merging commits og pull requests.
+  - Patch - Number of commits in the current branch.
+  - Build - Number of builds in the current branch.
 
 ## Installation
 1. Open the Unity Package Manager
